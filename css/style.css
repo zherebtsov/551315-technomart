@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-navigation {
+  font-size: 17px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.top-navigation .logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #ee3643;
+
+  border-bottom: 5px solid #b52933;
+}
+
+.top-navigation .search-field {
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.top-navigation .menu {
+  list-style: none;
+}
+
+.top-navigation .menu a {
+  color: #ffffff;
+}
+
+.top-navigation .menu .checkout {
+  background-color: #63a63e;
+}
