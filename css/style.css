@@ -160,34 +160,34 @@ a {
   list-style: none;
 }
 
-.top-navigation .menu a {
+.top-navigation .link {
   color: #ffffff;
 }
 
-.top-navigation .menu a:focus,
-.top-navigation .menu a:hover {
+.top-navigation .link:focus,
+.top-navigation .link:hover {
   background-color: #212a3a;
 }
 
-.top-navigation .menu a:active {
+.top-navigation .link:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #161d29;
 }
 
-.top-navigation .menu .cart-red {
+.top-navigation .cart-red {
   background-color: #ee3643;
 }
 
-.top-navigation .menu .checkout {
+.top-navigation .checkout {
   background-color: #63a63e;
 }
 
-.top-navigation .menu .checkout:focus,
-.top-navigation .menu .checkout:hover {
+.top-navigation .checkout:focus,
+.top-navigation .checkout:hover {
   background-color: #5fbb2d;
 }
 
-.top-navigation .menu .checkout:active {
+.top-navigation .checkout:active {
   background-color: #518534;
 }
 
@@ -252,7 +252,7 @@ a {
   list-style-type: none;
 }
 
-.main-navigation .site-navigation .link {
+.main-navigation .link {
   font-size: 17px;
   color: #ffffff;
 
@@ -261,12 +261,12 @@ a {
   border-bottom: solid 5px #293449;
 }
 
-.main-navigation .site-navigation .link:focus,
-.main-navigation .site-navigation .link:hover {
+.main-navigation .link:focus,
+.main-navigation .link:hover {
   background-color: #293449;
 }
 
-.main-navigation .site-navigation .link:active {
+.main-navigation .link:active {
   background-color: #1d2739;
 
   border-bottom: solid 5px #1d2739;
@@ -276,30 +276,30 @@ a {
   list-style-type: none;
 }
 
-.stock .list .item {
+.stock .item {
   color: #ffffff;
 
   background-color: #cccccc;
 }
 
-.stock .list .item h3 {
+.stock h3 {
   font-size: 24px;
   font-weight: 700;
 }
 
-.stock .list .background-orange {
+.stock .background-orange {
   background-color: #ffbf47;
 }
 
-.stock .list .background-blue {
+.stock .background-blue {
   background-color: #3bbce3;
 }
 
-.stock .list .background-purple {
+.stock .background-purple {
   background-color: #dc91d8;
 }
 
-.stock .list .background-green {
+.stock .background-green {
   background-color: #8ed78f;
 }
 
@@ -315,7 +315,7 @@ a {
   list-style-type: none;
 }
 
-.slider .slide h3 {
+.slider h3 {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
@@ -331,7 +331,7 @@ a {
   background-color: #f9f5f0;
 }
 
-.popular-section .heading h2 {
+.popular-section h2 {
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -341,42 +341,38 @@ a {
   list-style-type: none;
 }
 
-.popular-section .list .item {
+.popular-section .item {
   border: solid 1px #e4e4e4;
+  text-align: center;
 }
 
-.popular-section .list .item:hover {
+.popular-section .item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
   border-color: transparent;
 }
 
-.products .item {
+.popular-products .item {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  text-align: center;
 }
 
-.products .item .old-price {
+.popular-products .old-price {
   color: #a9a9a9;
   text-decoration: line-through;
 }
 
-.products .item .price {
+.popular-products .price {
   color: #ffffff;
 
   background-color: #ee3643;
 }
 
-.manufacturers .item {
-  text-align: center;
-}
-
-.manufacturers .list .item:active {
+.manufacturers .item:active {
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
-.manufacturers .list .item:active a {
+.manufacturers .item:active a {
   opacity: 0.3;
 }
 
@@ -403,7 +399,7 @@ a {
   list-style-type: none;
 }
 
-.services .tabs .tab {
+.services .tab {
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 700;
   font-size: 21px;
@@ -414,14 +410,14 @@ a {
   border: none;
 }
 
-.services .tabs .tab:focus,
-.services .tabs .tab:hover {
+.services .tab:focus,
+.services .tab:hover {
   color: #ffffff;
 
   background-color: #293449;
 }
 
-.services .tabs .active {
+.services .active {
   color: #32425c;
 
   background-color: #ffffff;
@@ -447,7 +443,7 @@ a {
   list-style-type: none;
 }
 
-.about ul li {
+.about li {
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -459,12 +455,12 @@ a {
   background-color: #32425c;
 }
 
-.main-footer .contacts .address {
+.main-footer .address {
   font-size: 18px;
 }
 
-.main-footer .sitemap .site-navigation,
-.main-footer .sitemap .categories-navigation {
+.main-footer .site-navigation,
+.main-footer .categories-navigation {
   list-style-type: none;
 }
 
@@ -482,7 +478,7 @@ a {
   opacity: 0.5;
 }
 
-.main-footer .sitemap .categories-navigation a {
+.main-footer .categories-navigation a {
   color: #ffd180;
 }
 
@@ -506,19 +502,19 @@ a {
   text-decoration: none;
 }
 
-.main-footer .bottom .social-buttons {
+.main-footer .social-buttons {
   list-style-type: none;
 }
 
-.main-footer .bottom .social-buttons a {
+.main-footer .social-buttons a {
   color: #ffffff;
 
   background-color: #212a3a;
 }
 
-.main-footer .bottom .social-buttons a:hover,
-.main-footer .bottom .social-buttons a:focus,
-.main-footer .bottom .social-buttons a:active {
+.main-footer .social-buttons a:hover,
+.main-footer .social-buttons a:focus,
+.main-footer .social-buttons a:active {
   background-color: #ee3643;
 }
 
@@ -535,18 +531,18 @@ a {
   border-top: none;
 }
 
-.modal-callback .callback-form label {
+.modal-callback label {
   font-size: 18px;
 }
 
-.modal-callback .callback-form textarea,
-.modal-callback .callback-form input {
+.modal-callback textarea,
+.modal-callback input {
   font-family: "PT Sans", Arial, sans-serif;
 
   border: solid 2px #dee3e4;
   border-radius: 2px;
 }
-.modal-callback .callback-form input::placeholder {
+.modal-callback input::placeholder {
   color: #a9a9a9;
 }
 
@@ -559,11 +555,11 @@ a {
   list-style-type: none;
 }
 
-.breadcrumbs .item a {
+.breadcrumbs .link {
   color: #000000;
 }
 
-.inner-page .products h1 {
+.products h1 {
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -572,80 +568,80 @@ a {
   background-color: #f2f6f8;
 }
 
-.inner-page .products .filter {
+.products .filter {
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
 }
 
-.inner-page .products .filter h2 {
+.products h2 {
   font-size: 13px;
   font-weight: 400;
 
   background-color: #f7f3ec;
 }
 
-.inner-page .products .filter h3 {
+.products h3 {
   font-size: 17px;
   font-weight: 700;
 }
 
-.inner-page .products .filter ul {
+.products ul {
   list-style-type: none;
 }
 
-.inner-page .products .filter .range,
-.inner-page .products .filter .min,
-.inner-page .products .filter .max {
+.products .filter .range,
+.products .filter .min,
+.products .filter .max {
   background-color: #f7f3ec;
 }
 
-.inner-page .products .filter fieldset {
+.products .filter fieldset {
   border: none;
   border-bottom: solid 1px #e5e5e5;
 }
 
-.inner-page .products .filter fieldset:nth-child(3) {
+.products .filter fieldset:last-child {
   border-bottom: none;
 }
 
 
-.inner-page .products .sorting {
+.products .sorting {
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
 
   background-color: #f7f3ec;
 }
 
-.inner-page .products .sorting h2 {
+.products .sorting h2 {
   font-size: 13px;
   font-weight: 400;
 }
 
-.inner-page .products .sorting ul {
+.products .sorting ul {
   list-style-type: none;
 }
 
-.inner-page .products .sorting .parameter {
+.products .sorting .parameter {
   color: rgba(0, 0, 0, 0.3);
   border-bottom: dotted 1px #ee3643;
 }
 
-.inner-page .products .sorting .parameter:focus,
-.inner-page .products .sorting .parameter:hover {
+.products .sorting .parameter:focus,
+.products .sorting .parameter:hover {
   color: rgba(0, 0, 0, 1);
   border-bottom: solid 1px #ee3643;
 }
 
-.inner-page .products .sorting .active {
+.products .sorting .active {
   color: #ee3643;
   border-bottom: none;
 }
 
-.inner-page .products .pagination ul {
+.products .pagination ul {
   list-style-type: none;
 }
 
-.inner-page .products .pagination .active {
+.products .pagination .active {
   color: #ffffff;
 
   background-color: #ee3643;
@@ -657,7 +653,7 @@ a {
   font-weight: 400;
 }
 
-.modal-cart .modal-footer .modal-close {
+.modal-cart .button-close {
   color: #000000;
 
   background-color: #ffffff;
