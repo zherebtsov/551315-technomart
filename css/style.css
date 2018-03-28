@@ -325,28 +325,28 @@ a {
   font-size: 18px;
 }
 
-.popular-section .heading {
+.tile-section .heading {
   color: #32425c;
 
   background-color: #f9f5f0;
 }
 
-.popular-section h2 {
+.tile-section h2 {
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.popular-section .list {
+.tile-section .list {
   list-style-type: none;
 }
 
-.popular-section .item {
+.tile-section .item {
   border: solid 1px #e4e4e4;
   text-align: center;
 }
 
-.popular-section .item:hover {
+.tile-section .item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
   border-color: transparent;
 }
@@ -600,7 +600,7 @@ a {
   border-bottom: solid 1px #e5e5e5;
 }
 
-.products .filter fieldset:last-child {
+.products .filter fieldset:last-of-type {
   border-bottom: none;
 }
 
@@ -657,4 +657,120 @@ a {
   color: #000000;
 
   background-color: #ffffff;
+}
+
+/* ----- Сеточные стили ------ */
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.about-store {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-store .tagline-wrapper {
+  width: 205px;
+}
+
+.about-store .contacts {
+  width: 272px;
+}
+
+.about-store .user {
+  width: 282px;
+}
+
+.tile-section .list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile-section-4-col .item {
+  width: 216px;
+  margin: 10px;
+}
+
+.tile-section-4-col .item:nth-child(4n-3) {
+  margin-left: 0;
+}
+
+.tile-section-4-col .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.services .tabs-wrapper {
+  display: flex;
+}
+
+.services .tabs {
+  margin: 0;
+  padding: 0;
+  width: 240px;
+}
+
+.services .tabs-content {
+  margin-top: 0;
+  margin-left: 60px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  width: 380px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-wrapper .about{
+  width: 540px;
+}
+
+.about-wrapper .contacts {
+  width: 300px;
+}
+
+.main-footer .contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer .contacts {
+  width: 330px;
+}
+
+.main-footer .sitemap {
+  width: 550px;
+}
+
+.inner-page-container {
+  display: flex;
+}
+
+.inner-page-container .aside {
+  width: 220px;
+}
+
+.inner-page-container .content {
+  margin-left: 20px;
+  width: 700px;
+}
+
+.tile-section-3-col .item {
+  width: 218px;
+  margin: 10px;
+}
+
+.tile-section-3-col .item:nth-child(3n-2) {
+  margin-left: 0;
+}
+
+.tile-section-3-col .item:nth-child(3n) {
+  margin-right: 0;
 }
