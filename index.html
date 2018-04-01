@@ -12,7 +12,7 @@
     <header class="main-header">
       <section class="top-navigation">
         <div class="container flex-container">
-          <a href="#" class="logo">Техномарт</a>
+          <a href="index.html" class="logo">Техномарт</a>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="search-field">Поиск</label>
             <input type="search" id="search-field" class="search-field" name="search" placeholder="Поиск:">
@@ -93,7 +93,7 @@
                     <p>Настоящие мужские игрушки</p>
                   </div>
                   <img src="img/slide_1.jpg" alt="Дрели">
-                  <a href="#" class="button button-red">Открыть каталог</a>
+                  <a href="catalog.html" class="button button-red">Открыть каталог</a>
                 </li>
                 <li class="slide active">
                   <div class="caption">
@@ -101,7 +101,7 @@
                     <p>Соседям на радость!</p>
                   </div>
                   <img src="img/slide_2.jpg" alt="Перфораторы">
-                  <a href="#" class="button button-red">Открыть каталог</a>
+                  <a href="catalog.html" class="button button-red">Открыть каталог</a>
                 </li>
               </ul>
               <ul class="dots">
@@ -139,9 +139,9 @@
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 9000</h3>
               <p class="old-price">32500 Р.</p>
-              <span class="price-wrapper">
+              <div class="price-wrapper">
                 <p class="price">25500 Р.</p>
-              </span>
+              </div>
             </li>
 
             <li class="item">
@@ -154,9 +154,9 @@
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 3000</h3>
               <p class="old-price">22500 Р.</p>
-              <span class="price-wrapper">
+              <div class="price-wrapper">
                 <p class="price">15500 Р.</p>
-              </span>
+              </div>
             </li>
 
             <li class="item">
@@ -169,9 +169,9 @@
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
               <p class="old-price">30500 Р.</p>
-              <span class="price-wrapper">
+              <div class="price-wrapper">
                 <p class="price">25500 Р.</p>
-              </span>
+              </div>
             </li>
 
             <li class="item new">
@@ -183,9 +183,9 @@
                 <img src="img/product_4.jpg" alt="Перфоратор BOSCH BFG 2000">
               </div>
               <h3 class="title">Перфоратор BOSCH BFG 2000</h3>
-              <span class="price-wrapper">
+              <div class="price-wrapper">
                 <p class="price">12500 Р.</p>
-              </span>
+              </div>
             </li>
           </ul>
         </section>
@@ -271,7 +271,10 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>заехав в наш офис:</p>
           <div class="mini-map">
-            <img src="img/mini_map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            <a href="https://www.google.com/maps" target="_blank">
+              <span class="visually-hidden">Ссылка на сервис карт</span>
+              <img src="img/mini_map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            </a>
           </div>
           <a href="#" class="button button-red">Заблудились? Напишите нам!</a>
         </section>
@@ -315,7 +318,9 @@
             </li>
           </ul>
           <p class="callback">Обратная связь:<br><a href="#">mail@htmlacademy.ru</a></p>
-          <p class="author">Разработанно -<br><a href="#">htmlacademy.ru</a></p>
+          <p class="author">Разработанно -<br>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
+          </p>
         </div>
       </section>
     </footer>
@@ -329,22 +334,23 @@
       <section class="modal modal-callback hidden">
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
         <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="name-callback">Ваше имя:</label>
-            <input id="name-callback" type="text" name="name" placeholder="Представьтесь, пожайлуста">
-          </p>
-          <p>
-            <label for="email-callback">Ваше e-mail:</label>
-            <input id="email-callback" type="email" name="email" placeholder="Для отправки ответа">
-          </p>
-          <p>
-            <label for="message-callback">Текст письма:</label>
-            <textarea id="message-callback" name="message" placeholder="В свободной форме">
-            </textarea>
-          </p>
-          <footer class="modal-footer">
+          <div class="modal-body">
+            <p>
+              <label for="name-callback">Ваше имя:</label>
+              <input id="name-callback" type="text" name="name" placeholder="Представьтесь, пожайлуста">
+            </p>
+            <p>
+              <label for="email-callback">Ваше e-mail:</label>
+              <input id="email-callback" type="email" name="email" placeholder="Для отправки ответа">
+            </p>
+            <p class="message-field">
+              <label for="message-callback">Текст письма:</label>
+              <textarea id="message-callback" rows="6" name="message" placeholder="В свободной форме"></textarea>
+            </p>
+          </div>
+          <div class="modal-footer">
             <button type="submit" class="button button-red">Отправить</button>
-          </footer>
+          </div>
         </form>
       </section>
     </div>
