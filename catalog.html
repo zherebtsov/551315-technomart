@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="inner-page">
     <header class="main-header">
@@ -67,9 +67,8 @@
       <div class="container">
         <section class="breadcrumbs">
           <ul class="list">
-            <li><a href="#" class="link">
+            <li><a href="#" class="link icon-home">
               <span class="visually-hidden">Главная</span>
-              <span class="icon-home"></span>
             </a></li>
             <li><a href="#" class="link">Каталог</a></li>
             <li><a href="#" class="link">Инструмент</a></li>
@@ -85,7 +84,7 @@
                 <h2>Фильтр:</h2>
                 <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
                   <fieldset class="filter-price">
-                    <legend><h3>Цена:</h3></legend>
+                    <legend>Цена:</legend>
                     <div class="range">
                       <div class="scale">
                         <div class="bar"></div>
@@ -100,71 +99,50 @@
                     <div class="price">
                       <label>
                         <span class="visually-hidden">Минимальное значение цены</span>
-                        <input class="min" type="text" value="0">
+                        <input class="min" type="text" value="0" name="price-min">
                       </label>
                       <span>—</span>
                       <label>
                         <span class="visually-hidden">Максимальное значение цены</span>
-                        <input class="max" type="text" value="30000">
+                        <input class="max" type="text" value="30000" name="price-max">
                       </label>
                     </div>
                   </fieldset>
                   <fieldset class="filter-manufacturers">
-                    <legend><h3>Производители:</h3></legend>
+                    <legend>Производители:</legend>
                     <ul class="list-manufacturers">
                       <li>
-                        <label>
-                          <input type="checkbox" class="visually-hidden" checked>
-                          <span class="checkbox-indicator"></span>
-                          Bosch
-                        </label>
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" id="filter-bosch" name="bosch" checked>
+                        <label for="filter-bosch" class="checkbox-indicator">Bosch</label>
                       </li>
                       <li>
-                        <label>
-                          <input type="checkbox" class="visually-hidden">
-                          <span class="checkbox-indicator"></span>
-                          Интерскоп
-                        </label>
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" id="filter-interskop" name="interskop">
+                        <label for="filter-interskop" class="checkbox-indicator">Интерскоп</label>
                       </li>
                       <li>
-                        <label>
-                          <input type="checkbox" class="visually-hidden" checked>
-                          <span class="checkbox-indicator"></span>
-                          Makita
-                        </label>
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" id="filter-makita" name="makita" checked>
+                        <label for="filter-makita" class="checkbox-indicator">Makita</label>
                       </li>
                       <li>
-                        <label>
-                          <input type="checkbox" class="visually-hidden">
-                          <span class="checkbox-indicator"></span>
-                          Dewalt
-                        </label>
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" id="filter-dewalt" name="dewalt">
+                        <label for="filter-dewalt" class="checkbox-indicator">Dewalt</label>
                       </li>
                       <li>
-                        <label>
-                          <input type="checkbox" class="visually-hidden">
-                          <span class="checkbox-indicator"></span>
-                          Hitachi
-                        </label>
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" id="filter-hitachi" name="hitachi">
+                        <label for="filter-hitachi" class="checkbox-indicator">Hitachi</label>
                       </li>
                     </ul>
                   </fieldset>
                   <fieldset class="filter-supply">
-                    <legend><h3>Питание:</h3></legend>
+                    <legend>Питание:</legend>
                     <ul class="list-supply">
                       <li>
-                        <label>
-                          <input type="radio" class="visually-hidden" name="supply" checked>
-                          <span class="radio-indicator"></span>
-                          Аккумуляторные
-                        </label>
+                        <input type="radio" class="visually-hidden filter-input filter-input-radio" name="supply" id="filter-accumulators" value="accumulators" checked>
+                        <label for="filter-accumulators" class="radio-indicator">Аккумуляторные</label>
                       </li>
                       <li>
-                        <label>
-                          <input type="radio" class="visually-hidden" name="supply">
-                          <span class="radio-indicator"></span>
-                          Сетевые
-                        </label>
+                        <input type="radio" class="visually-hidden filter-input filter-input-radio" name="supply" id="filter-electric" value="electric">
+                        <label for="filter-electric" class="radio-indicator">Сетевые</label>
                       </li>
                     </ul>
                   </fieldset>
@@ -182,13 +160,11 @@
                   <li><a href="#" class="parameter">По функционалу</a></li>
                 </ul>
                 <ul class="sorting-direction">
-                  <li><a href="#" class="parameter active">
+                  <li><a href="#" class="parameter icon-up-dir active">
                     <span class="visually-hidden">По возрастанию</span>
-                    <span class="icon-up-dir"></span>
                   </a></li>
-                  <li><a href="#" class="parameter">
+                  <li><a href="#" class="parameter icon-down-dir">
                     <span class="visually-hidden">По убыванию</span>
-                    <span class="icon-down-dir"></span>
                   </a></li>
                 </ul>
               </section>
