@@ -40,6 +40,7 @@ function initCallbackForm(popupClassName) {
     if (!userName.value || !userEmail.value || !message.value) {
       evt.preventDefault();
       popupElement.classList.remove("modal-error");
+      popupElement.offsetWidth = popupElement.offsetWidth;
       popupElement.classList.add("modal-error");
     }
   });

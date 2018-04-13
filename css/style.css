@@ -206,11 +206,17 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
 }
 
-.top-navigation .icon-search {
+.icon-search::before {
+  content: "";
   position: absolute;
 
   top: 12px;
   left: 17px;
+
+  width: 17px;
+  height: 17px;
+
+  background: url("../img/svg/icon-search.svg") no-repeat 0 0;
 
   opacity: 0.3;
 }
@@ -219,8 +225,8 @@ input[type="radio"].visually-hidden {
   background-color: #212a3a;
 }
 
-.search-field:focus + .icon-search,
-.search-field:hover + .icon-search {
+.search-field:focus + .icon-search::before,
+.search-field:hover + .icon-search::before {
   opacity: 1;
 }
 
@@ -229,8 +235,9 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.search-field:focus + .icon-search path {
-  fill: #ee3643;
+.search-field:focus + .icon-search::before {
+  background-image: url("../img/svg/icon-search_active.svg");
+  opacity: 1;
 }
 
 .search-field::-webkit-input-placeholder {
