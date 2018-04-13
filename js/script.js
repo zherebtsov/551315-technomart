@@ -36,12 +36,12 @@ function initCallbackForm(popupClassName) {
   var userEmail = formElement.querySelector('[name=email]');
   var message = formElement.querySelector('[name=message]');
 
-  formElement.addEventListener("submit", function (evt) {
+  formElement.addEventListener('submit', function (evt) {
     if (!userName.value || !userEmail.value || !message.value) {
       evt.preventDefault();
-      popupElement.classList.remove("modal-error");
+      popupElement.classList.remove('modal-error');
       popupElement.offsetWidth = popupElement.offsetWidth;
-      popupElement.classList.add("modal-error");
+      popupElement.classList.add('modal-error');
     }
   });
 }
