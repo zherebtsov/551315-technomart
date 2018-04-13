@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Техномарт - Главная</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/style.min.css">
@@ -132,7 +132,7 @@
           <ul class="list">
             <li class="item">
               <div class="actions">
-                <a href="#" class="button button-green">Купить</a>
+                <a href="#" class="button button-green button-open-cart">Купить</a>
                 <a href="#" class="button button-border-green">В закладки</a>
               </div>
               <div class="image">
@@ -147,7 +147,7 @@
 
             <li class="item">
               <div class="actions">
-                <a href="#" class="button button-green">Купить</a>
+                <a href="#" class="button button-green button-open-cart">Купить</a>
                 <a href="#" class="button button-border-green">В закладки</a>
               </div>
               <div class="image">
@@ -162,7 +162,7 @@
 
             <li class="item">
               <div class="actions">
-                <a href="#" class="button button-green">Купить</a>
+                <a href="#" class="button button-green button-open-cart">Купить</a>
                 <a href="#" class="button button-border-green">В закладки</a>
               </div>
               <div class="image">
@@ -177,7 +177,7 @@
 
             <li class="item new">
               <div class="actions">
-                <a href="#" class="button button-green">Купить</a>
+                <a href="#" class="button button-green button-open-cart">Купить</a>
                 <a href="#" class="button button-border-green">В закладки</a>
               </div>
               <div class="image">
@@ -275,12 +275,12 @@
           <p>Вы можете забрать товар сами,</p>
           <p>заехав в наш офис:</p>
           <div class="mini-map">
-            <a href="https://www.google.com/maps" target="_blank">
+            <a href="#" class="button-open-map">
               <span class="visually-hidden">Ссылка на сервис карт</span>
               <img src="img/mini_map.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             </a>
           </div>
-          <a href="#" class="button button-red">Заблудились? Напишите нам!</a>
+          <a href="#" class="button button-red button-open-callback">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -330,12 +330,15 @@
     </footer>
 
     <div class="container">
-      <section class="modal modal-map hidden">
+      <section class="modal modal-map">
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-        <img src="img/map.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBqmfYfaCA" width="940" height="448" frameborder="0"></iframe>
+        <div class="image-map-wrapper">
+          <img src="img/map.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </div>
       </section>
 
-      <section class="modal modal-callback hidden">
+      <section class="modal modal-callback">
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
         <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal-body">
@@ -357,6 +360,20 @@
           </div>
         </form>
       </section>
+
+      <section class="modal modal-cart">
+        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <div class="modal-body">
+          <span class="icon-accept"></span>
+          <h2>Товар добавлен в корзину!</h2>
+        </div>
+        <footer class="modal-footer">
+          <a href="#" class="button button-red">Оформить заказ</a>
+          <button class="button button-close">Продолжить покупки</button>
+        </footer>
+      </section>
     </div>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

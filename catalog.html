@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Техномарт - Каталог</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/style.min.css">
@@ -98,12 +98,12 @@
                       </button>
                     </div>
                     <div class="price">
-                      <label>
+                      <label class="price-label">
                         <span class="visually-hidden">Минимальное значение цены</span>
                         <input class="min" type="text" value="0" name="price-min">
                       </label>
-                      <span>—</span>
-                      <label>
+                      <span class="price-separator">—</span>
+                      <label class="price-label">
                         <span class="visually-hidden">Максимальное значение цены</span>
                         <input class="max" type="text" value="30000" name="price-max">
                       </label>
@@ -175,7 +175,7 @@
 
                   <li class="item">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -190,7 +190,7 @@
 
                   <li class="item">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -205,7 +205,7 @@
 
                   <li class="item new">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -219,7 +219,7 @@
 
                   <li class="item">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -234,7 +234,7 @@
 
                   <li class="item new">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -249,7 +249,7 @@
 
                   <li class="item">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -263,7 +263,7 @@
 
                   <li class="item new">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -278,7 +278,7 @@
 
                   <li class="item">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -293,7 +293,7 @@
 
                   <li class="item">
                     <div class="actions">
-                      <a href="#" class="button button-green">Купить</a>
+                      <a href="#" class="button button-green button-open-cart">Купить</a>
                       <a href="#" class="button button-border-green">В закладки</a>
                     </div>
                     <div class="image">
@@ -375,7 +375,38 @@
     </footer>
 
     <div class="container">
-      <section class="modal modal-cart hidden">
+      <section class="modal modal-map">
+        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBqmfYfaCA" width="940" height="448" frameborder="0"></iframe>
+        <div class="image-map-wrapper">
+          <img src="img/map.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </div>
+      </section>
+
+      <section class="modal modal-callback">
+        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="modal-body">
+            <p>
+              <label for="name-callback">Ваше имя:</label>
+              <input id="name-callback" type="text" name="name" placeholder="Представьтесь, пожайлуста">
+            </p>
+            <p>
+              <label for="email-callback">Ваше e-mail:</label>
+              <input id="email-callback" type="email" name="email" placeholder="Для отправки ответа">
+            </p>
+            <p class="message-field">
+              <label for="message-callback">Текст письма:</label>
+              <textarea id="message-callback" rows="6" name="message" placeholder="В свободной форме"></textarea>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="button button-red">Отправить</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="modal modal-cart">
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
         <div class="modal-body">
           <span class="icon-accept"></span>
@@ -388,5 +419,6 @@
       </section>
     </div>
 
+    <script src="js/script.min.js"></script>
   </body>
 </html>

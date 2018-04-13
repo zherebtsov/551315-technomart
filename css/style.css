@@ -168,8 +168,6 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 5px 0 0 #8e1e26;
 }
 
-/* <header> */
-
 .main-header {
   padding-bottom: 60px;
   color: #32425c;
@@ -608,10 +606,6 @@ input[type="radio"].visually-hidden {
   background-color: #1d2739;
 }
 
-/* </header> */
-
-/* <main> */
-
 .new::before {
   content: "";
 
@@ -871,7 +865,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.slider .slide p {
+.slide p {
   margin-top: 3px;
   margin-bottom: 0;
   font-size: 18px;
@@ -1567,11 +1561,62 @@ input[type="radio"].visually-hidden {
 
 .modal {
   position: fixed;
+  display: none;
   top: 10%;
   z-index: 99;
   -webkit-box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
   box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
   border-top: solid 7px #ff5257;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .modal .modal-close {
@@ -1588,6 +1633,7 @@ input[type="radio"].visually-hidden {
   border: 0;
 
   cursor: pointer;
+  z-index: 9;
 }
 
 .modal .modal-close::before,
@@ -1624,6 +1670,22 @@ input[type="radio"].visually-hidden {
 .modal-map {
   border-top: none;
   line-height: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map .image-map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
 }
 
 .modal-cart,
@@ -1882,7 +1944,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 23px;
 }
 
-.filter-price .price input {
+.price input {
   width: 89px;
   padding: 9px 0 11px 5px;
   font-weight: 400;
@@ -1894,7 +1956,7 @@ input[type="radio"].visually-hidden {
   border-radius: 3px;
 }
 
-.filter-price .price label + span {
+.price-label + .price-separator {
   margin-left: 5px;
   margin-right: 5px;
   font-size: 16px;
@@ -2160,8 +2222,4 @@ input[type="radio"].visually-hidden {
   color: #000000;
 
   background-color: #ffffff;
-}
-
-.hidden {
-  display: none;
 }
